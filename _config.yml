@@ -1,0 +1,12 @@
+title: Computer Vision - 4042
+description: Course website for Computer Vision - Spring 4042
+theme: minima
+
+markdown: kramdown
+
+header_pages:
+  - schedule.md
+  - assignments.md
+  - materials.md
+  - policies.md
+  - staff.md
