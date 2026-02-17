@@ -166,3 +166,36 @@ tr:hover td{
   font-weight: 600;
   font-size: .9rem;
 }
+
+
+.assignment-card{
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 18px 14px;
+  margin: 16px 0 18px;
+  background: var(--bg);
+  box-shadow: 0 10px 24px rgba(15,23,42,.06);
+}
+
+.assignment-card h2{
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.assignment-card ul{
+  margin: 0 0 10px;
+  padding-left: 18px;
+}
+
+.assignment-card li{
+  margin: 6px 0;
+  color: var(--muted);
+}
+
+.assignment-card b{
+  color: var(--ink);
+}
+
+.assignment-card a{
+  font-weight: 600;
+}

@@ -5,79 +5,92 @@ title: Assignments
 
 # Assignments
 
-
 <div class="assignment-card">
-## Assignment 1
-- Release Date:  1404/12/08
-- Deadline:  1404/12/22
-- Description:  This assignment focuses on topics related to Image Formation and Image Processing in the Spatial Domain.
-- Submission: Faculty LMS  
+  <h2>Assignment 1</h2>
+  <ul>
+    <li><b>Release Date:</b> 1404/12/08</li>
+    <li><b>Deadline:</b> 1404/12/22</li>
+    <li><b>Description:</b> This assignment focuses on topics related to Image Formation and Image Processing in the Spatial Domain.</li>
+    <li><b>Submission:</b> Faculty LMS</li>
+  </ul>
 
-[Assignment PDF](#)  
-[Solution PDF](#)
-
+  <p>
+    <a href="#">Assignment PDF</a><br>
+    <a href="#">Solution PDF</a>
+  </p>
 </div>
 
 <div class="assignment-card">
-## Assignment 2
-- Release Date:  1404/12/22
-- Deadline:  1405/01/14
-- Description:  This assignment focuses on topics related to Shape Extraction, Color Spaces and Morphological Image Processing.
-- Submission: Faculty LMS  
+  <h2>Assignment 2</h2>
+  <ul>
+    <li><b>Release Date:</b> 1404/12/22</li>
+    <li><b>Deadline:</b> 1405/01/14</li>
+    <li><b>Description:</b> This assignment focuses on topics related to Shape Extraction, Color Spaces, and Morphological Image Processing.</li>
+    <li><b>Submission:</b> Faculty LMS</li>
+  </ul>
 
-[Assignment PDF](#)  
-[Solution PDF](#)
-
+  <p>
+    <a href="#">Assignment PDF</a><br>
+    <a href="#">Solution PDF</a>
+  </p>
 </div>
 
 <div class="assignment-card">
+  <h2>Assignment 3</h2>
+  <ul>
+    <li><b>Release Date:</b> 1405/01/14</li>
+    <li><b>Deadline:</b> 1405/02/04</li>
+    <li><b>Description:</b> This assignment focuses on topics related to Correspondence and Image Alignment, Image Segmentation, and Morphological Image Processing.</li>
+    <li><b>Submission:</b> Faculty LMS</li>
+  </ul>
 
-## Assignment 3
-- Release Date:  1405/01/14
-- Deadline:  1405/02/04
-- Description:  This assignment focuses on topics related to Corresponding and Image Alignment, Image Segmentation and Morphological Image Processing.
-- Submission: Faculty LMS  
-
-[Assignment PDF](#)  
-[Solution PDF](#)
-
+  <p>
+    <a href="#">Assignment PDF</a><br>
+    <a href="#">Solution PDF</a>
+  </p>
 </div>
 
 <div class="assignment-card">
+  <h2>Assignment 4</h2>
+  <ul>
+    <li><b>Release Date:</b> 1405/02/04</li>
+    <li><b>Deadline:</b> 1405/02/25</li>
+    <li><b>Description:</b> This assignment focuses on topics related to Image Classification, Image Descriptors, and CNNs.</li>
+    <li><b>Submission:</b> Faculty LMS</li>
+  </ul>
 
-## Assignment 4
-- Release Date:  1405/02/04
-- Deadline:  1405/02/25
-- Description:  This assignment focuses on topics related to Image Classification, Image Descriptors and CNNs.
-- Submission: Faculty LMS  
-
-[Assignment PDF](#)  
-[Solution PDF](#)
-
+  <p>
+    <a href="#">Assignment PDF</a><br>
+    <a href="#">Solution PDF</a>
+  </p>
 </div>
 
 <div class="assignment-card">
+  <h2>Assignment 5</h2>
+  <ul>
+    <li><b>Release Date:</b> 1405/02/25</li>
+    <li><b>Deadline:</b> 1405/03/15</li>
+    <li><b>Description:</b> This assignment focuses on topics related to Data Augmentation, Semantic Segmentation, and Object Detection.</li>
+    <li><b>Submission:</b> Faculty LMS</li>
+  </ul>
 
-## Assignment 5
-- Release Date:  1405/02/25
-- Deadline:  1405/03/15
-- Description:  This assignment focuses on topics related to Data Augmentation, Semantic Segmentation and Object Detection.
-- Submission: Faculty LMS  
-
-[Assignment PDF](#)  
-[Solution PDF](#)
-
+  <p>
+    <a href="#">Assignment PDF</a><br>
+    <a href="#">Solution PDF</a>
+  </p>
 </div>
 
 <div class="assignment-card">
+  <h2>Assignment 6</h2>
+  <ul>
+    <li><b>Release Date:</b> 1405/03/15</li>
+    <li><b>Deadline:</b> 1405/04/05</li>
+    <li><b>Description:</b> This assignment focuses on topics related to Object Tracking, Correspondence and Image Alignment, and Self-Supervised Learning.</li>
+    <li><b>Submission:</b> Faculty LMS</li>
+  </ul>
 
-## Assignment 6
-- Release Date:  1405/03/15
-- Deadline:  1405/04/5
-- Description:  This assignment focuses on topics related to Object Tracking, Correspondence and Image Alignment and Self-Supervised Learning.
-- Submission: Faculty LMS  
-
-[Assignment PDF](#)  
-[Solution PDF](#)
-
+  <p>
+    <a href="#">Assignment PDF</a><br>
+    <a href="#">Solution PDF</a>
+  </p>
 </div>
