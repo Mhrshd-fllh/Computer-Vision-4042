@@ -7,26 +7,38 @@ title: Materials
 
 ## Textbooks
 
-<div style="display:flex; gap:40px;">
+<div class="book-grid">
 
-<div>
-<img src="assets/books/cover1.jpg" width="180">
-<p><b>Learning OpenCV 3</b><br>Kaehler & Bradski</p>
+<div class="book-card">
+  <img src="{{ site.baseurl }}/assets/books/cover1.jpg" alt="Learning OpenCV 3 cover">
+  <div class="book-meta">
+    <div class="book-title">Learning OpenCV 3</div>
+    <div class="book-author">Kaehler & Bradski</div>
+  </div>
 </div>
 
-<div>
-<img src="assets/books/cover2.jpg" width="180">
-<p><b>Learning OpenCV 4</b><br>Howse & Minichino</p>
+<div class="book-card">
+  <img src="{{ site.baseurl }}/assets/books/cover2.jpg" alt="Learning OpenCV 4 cover">
+  <div class="book-meta">
+    <div class="book-title">Learning OpenCV 4</div>
+    <div class="book-author">Howse & Minichino</div>
+  </div>
 </div>
 
-<div>
-<img src="assets/books/cover3.jpg" width="180">
-<p><b>Computer Vision</b><br>Szeliski</p>
+<div class="book-card">
+  <img src="{{ site.baseurl }}/assets/books/cover3.jpg" alt="Computer Vision cover">
+  <div class="book-meta">
+    <div class="book-title">Computer Vision</div>
+    <div class="book-author">Szeliski</div>
+  </div>
 </div>
 
-<div>
-<img src="assets/books/cover4.jpg" width="180">
-<p><b>Digital Image Processing</b><br>Gonzalez & Woods</p>
+<div class="book-card">
+  <img src="{{ site.baseurl }}/assets/books/cover4.jpg" alt="Digital Image Processing cover">
+  <div class="book-meta">
+    <div class="book-title">Digital Image Processing</div>
+    <div class="book-author">Gonzalez & Woods</div>
+  </div>
 </div>
 
 </div>
