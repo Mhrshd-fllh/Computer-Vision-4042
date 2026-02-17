@@ -30,8 +30,8 @@ Computer Vision is a subfield of Artificial Intelligence that aims to extract me
 In this course, we begin by studying image formation and camera models. We then discuss techniques for image enhancement in spatial domain. Methods for detecting simple geometric shapes such as lines and circles are introduced. The course continues with classical approaches to image segmentation and geometric image alignment and morphology of images.
 
 After reviewing traditional image processing techniques, modern deep learning-based approaches are presented, including object detection, image segmentation, and object tracking.
+
 ---
 
 ## Announcements
 
-- 

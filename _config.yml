@@ -11,4 +11,8 @@ header_pages:
   - policies.md
   - staff.md
 
+
+sass:
+  style: compressed
+
 github: {}
