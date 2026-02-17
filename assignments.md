@@ -7,6 +7,7 @@ title: Assignments
 
 
 <div class="assignment-card">
+
 ## Assignment 1
 - Release Date:  1404/12/08
 - Deadline:  1404/12/22
@@ -19,6 +20,7 @@ title: Assignments
 </div>
 
 <div class="assignment-card">
+
 ## Assignment 2
 - Release Date:  1404/12/22
 - Deadline:  1405/01/14
