@@ -523,43 +523,45 @@ body.dark-mode tbody tr:hover td{
 
 
 /* ===============================
-   HARD FIX: Dark mode table striping (no white rows)
+   FINAL FIX: Dark mode tables (NO zebra, NO white rows)
    Put at END of file
 =================================*/
 
 body.dark-mode table,
 body.dark-mode thead,
 body.dark-mode tbody,
-body.dark-mode tr{
-  background: transparent !important;
-}
-
-body.dark-mode table{
-  background: rgba(15, 23, 42, 0.55) !important;
-  border-color: var(--border) !important;
-}
-
-body.dark-mode th{
-  background: rgba(255,255,255,0.06) !important;
-  color: var(--ink) !important;
-  border-color: var(--border) !important;
-}
-
+body.dark-mode tr,
+body.dark-mode th,
 body.dark-mode td{
   background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
   color: var(--ink) !important;
   border-color: var(--border) !important;
 }
 
-/* zebra — force */
-body.dark-mode tbody tr:nth-child(odd) td{
-  background: rgba(255,255,255,0.02) !important;
-}
-body.dark-mode tbody tr:nth-child(even) td{
-  background: rgba(255,255,255,0.05) !important;
+/* Solid table look */
+body.dark-mode table{
+  background: rgba(15, 23, 42, 0.60) !important;
+  border: 1px solid var(--border) !important;
+  border-collapse: collapse !important;
 }
 
-/* hover */
-body.dark-mode tbody tr:hover td{
-  background: rgba(56, 189, 248, 0.12) !important;
+/* Header cells */
+body.dark-mode th{
+  background: rgba(255,255,255,0.06) !important;
+  font-weight: 700 !important;
 }
+
+/* Body cells (force same background everywhere) */
+body.dark-mode td{
+  background: rgba(255,255,255,0.02) !important;
+}
+
+/* Hover (optional, subtle) */
+body.dark-mode tbody tr:hover td{
+  background: rgba(56, 189, 248, 0.10) !important;
+}
+
+
+
