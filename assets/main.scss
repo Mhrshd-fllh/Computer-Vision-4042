@@ -428,3 +428,76 @@ body.dark-mode table thead{
     gap: 18px;
   }
 }
+
+
+
+/* ===============================
+   Mobile Header Fix (toggle + menu)
+=================================*/
+
+.header-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.header-actions{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ensure nav overlay stays above content */
+.site-nav .trigger{
+  z-index: 9999;
+}
+
+/* Mobile layout tweaks */
+@media (max-width: 720px){
+  .site-title{
+    font-size: 1.15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 62vw;
+  }
+
+  .theme-toggle{
+    padding: 6px 10px;
+    border-radius: 999px;
+    line-height: 1;
+  }
+
+  /* Make dropdown menu look like a panel and not fall behind */
+  .site-nav .trigger{
+    position: absolute;
+    right: 0;
+    top: 44px;
+    width: min(260px, 92vw);
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.20);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 16px 40px rgba(2,6,23,.25);
+  }
+
+  .site-nav .page-link{
+    display: block;
+    margin: 4px 0;
+  }
+}
+
+/* Dark mode menu panel */
+body.dark-mode .site-nav .trigger{
+  background: rgba(15,23,42,0.72);
+  border-color: rgba(255,255,255,0.10);
+}
+
+
+.site-header{
+  position: relative;
+  z-index: 1000;
+}
+
