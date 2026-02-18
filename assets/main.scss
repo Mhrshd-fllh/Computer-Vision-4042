@@ -48,8 +48,10 @@ body{
   position: relative;
   border: none;
   padding: 24px 0;
-  z-index: 9999;          /* ensure header stays above page content */
-  overflow: visible;      /* allow mobile dropdown to show */
+  z-index: 9999;
+
+  /* IMPORTANT: clip animation inside header */
+  overflow: hidden;
 
   background: linear-gradient(
     120deg,
@@ -149,25 +151,24 @@ body{
   align-items: center;
   gap: 10px;
   position: relative;
-  overflow: visible;
 }
 
-/* Links container */
+/* Links container (desktop inline) */
 .site-nav .trigger{
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* Theme button (DESKTOP) -> more pill-like */
+/* Theme button (DESKTOP) -> pill */
 .theme-toggle{
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   height: 36px;
-  padding: 0 16px;        /* pill */
-  border-radius: 999px;   /* very oval */
+  padding: 0 16px;
+  border-radius: 999px;
   border: 1px solid rgba(255,255,255,.22);
   background: rgba(255,255,255,.14);
   backdrop-filter: blur(8px);
@@ -453,11 +454,11 @@ body.dark-mode tbody tr:hover td{
 }
 
 /* ===============================
-   MOBILE: Keep layout + fix menu overlay + right alignment
+   MOBILE: menu overlay on top of content + right alignment
+   (uses fixed dropdown to avoid header overflow clipping)
 =================================*/
 
 @media (max-width: 720px){
-  /* title not collide */
   .site-title{
     max-width: 58vw;
     white-space: nowrap;
@@ -465,7 +466,7 @@ body.dark-mode tbody tr:hover td{
     text-overflow: ellipsis;
   }
 
-  /* bring nav closer to the right edge */
+  /* bring buttons closer to the right edge */
   .site-header .wrapper{
     padding-right: 10px;
     padding-left: 14px;
@@ -475,12 +476,12 @@ body.dark-mode tbody tr:hover td{
     gap: 8px;
   }
 
-  /* Dropdown panel: FORCE overlay on top of content */
+  /* Dropdown panel: fixed overlay (so it stays above content) */
   .site-nav .trigger{
     display: block;
-    position: absolute !important;
-    right: 0 !important;
-    top: 46px !important;
+    position: fixed !important;
+    right: 12px !important;
+    top: 78px !important;              /* just below header */
     width: min(300px, 92vw) !important;
 
     padding: 10px;
@@ -499,6 +500,7 @@ body.dark-mode tbody tr:hover td{
     pointer-events: none;
     transition: .18s ease;
   }
+
   .nav-trigger:checked ~ .trigger{
     opacity: 1;
     transform: translateY(0);
