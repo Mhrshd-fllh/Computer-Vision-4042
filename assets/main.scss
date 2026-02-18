@@ -61,22 +61,22 @@ body{
 
 .site-title,
 .site-title:visited{
-  color: #ffffff !important;
+  color: #0f172a !important;
   font-weight: 800;
   font-size: 1.3rem;
   letter-spacing: -0.3px;
 }
 
 .site-nav .page-link{
-  color: rgba(255,255,255,.9) !important;
+  color: #0f172a !important;
   font-weight: 600;
   padding: 8px 12px;
   border-radius: 10px;
 }
 
 .site-nav .page-link:hover{
-  background: rgba(255,255,255,.15);
-  color: #ffffff !important;
+  background: rgba(255,255,255,.35);
+  color: #0f172a !important;
   text-decoration: none;
 }
 
@@ -262,4 +262,61 @@ tr:hover td{
   border-top: 1px solid var(--border);
   color: var(--muted);
   margin-top: 40px;
+}
+
+
+/* ===============================
+   DARK MODE
+=================================*/
+
+body.dark-mode{
+  --bg: #0f172a;
+  --card: #111827;
+  --ink: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #1f2937;
+}
+
+body.dark-mode{
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body.dark-mode .page-content .wrapper{
+  background: var(--card);
+  border-color: var(--border);
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+
+body.dark-mode table{
+  border-color: var(--border);
+}
+
+body.dark-mode th{
+  background: #1f2937;
+}
+
+body.dark-mode td{
+  border-color: var(--border);
+}
+
+body.dark-mode .assignment-card,
+body.dark-mode .book-card{
+  background: var(--card);
+  border-color: var(--border);
+  box-shadow: 0 15px 40px rgba(0,0,0,.4);
+}
+
+body.dark-mode .site-header{
+  background: linear-gradient(
+    120deg,
+    #0f172a,
+    #1e3a8a,
+    #1d4ed8
+  );
+}
+
+body.dark-mode .site-title,
+body.dark-mode .site-nav .page-link{
+  color: #f1f5f9 !important;
 }
