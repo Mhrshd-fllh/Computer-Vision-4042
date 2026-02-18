@@ -35,26 +35,10 @@ body{
   max-width: 1000px;
 }
 
-.site-title,
-.site-title:visited{
-  color: rgba(255,255,255,.95) !important;
-  text-shadow: 0 2px 14px rgba(2, 6, 23, .25);
+/* Make header wrapper wider so nav is closer to the edge (desktop) */
+.site-header .wrapper{
+  max-width: 1240px;
 }
-
-.site-nav .page-link{
-  color: rgba(255,255,255,.92) !important;
-  text-shadow: 0 1px 10px rgba(2, 6, 23, .20);
-  background: rgba(255,255,255,.10);
-  border: 1px solid rgba(255,255,255,.16);
-  backdrop-filter: blur(6px);
-}
-
-.site-nav .page-link:hover{
-  background: rgba(255,255,255,.18);
-  border-color: rgba(255,255,255,.22);
-  text-decoration: none;
-}
-
 
 /* ===============================
    Animated Gradient Header
@@ -62,13 +46,11 @@ body{
 
 .site-header{
   position: relative;
-  overflow: hidden;
   border: none;
-
-  /* bigger */
   padding: 24px 0;
+  z-index: 9999;          /* ensure header stays above page content */
+  overflow: visible;      /* allow mobile dropdown to show */
 
-  /* animated gradient base */
   background: linear-gradient(
     120deg,
     var(--blue-1),
@@ -80,7 +62,7 @@ body{
   animation: headerFlow 14s ease-in-out infinite;
 }
 
-/* moving highlight "beam" */
+/* moving highlight */
 .site-header::before{
   content: "";
   position: absolute;
@@ -120,6 +102,83 @@ body{
 @media (prefers-reduced-motion: reduce){
   .site-header{ animation: none !important; }
   .site-header::before{ animation: none !important; }
+}
+
+/* ===============================
+   Header Typography + Links
+=================================*/
+
+.site-title,
+.site-title:visited{
+  color: rgba(255,255,255,.95) !important;
+  text-shadow: 0 2px 14px rgba(2, 6, 23, .25);
+}
+
+/* Default link look (desktop) */
+.site-nav .page-link{
+  color: rgba(255,255,255,.92) !important;
+  text-shadow: 0 1px 10px rgba(2, 6, 23, .20);
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.16);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.site-nav .page-link:hover{
+  background: rgba(255,255,255,.18);
+  border-color: rgba(255,255,255,.22);
+  text-decoration: none;
+}
+
+/* ===============================
+   Header Layout (Desktop + Mobile)
+=================================*/
+
+.header-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+/* push nav further right */
+.site-nav{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Links container */
+.site-nav .trigger{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Theme button (DESKTOP) -> more pill-like */
+.theme-toggle{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 36px;
+  padding: 0 16px;        /* pill */
+  border-radius: 999px;   /* very oval */
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.14);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+
+  font-weight: 800;
+  line-height: 1;
+}
+
+.theme-toggle:hover{
+  background: rgba(255,255,255,.20);
 }
 
 /* ===============================
@@ -176,13 +235,9 @@ tbody tr td{
   color: var(--ink);
 }
 
-/* Zebra striping (light mode) */
 tbody tr:nth-child(even) td{
   background: rgba(15, 23, 42, 0.02);
 }
-
-
-
 
 /* ===============================
    Assignment Cards
@@ -271,107 +326,6 @@ tbody tr:nth-child(even) td{
 }
 
 /* ===============================
-   Footer
-=================================*/
-
-.site-footer{
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  margin-top: 40px;
-}
-
-
-/* ===============================
-   DARK MODE
-=================================*/
-
-body.dark-mode{
-  --bg: #0f172a;
-  --card: #111827;
-  --ink: #f1f5f9;
-  --muted: #94a3b8;
-  --border: #1f2937;
-}
-
-body.dark-mode{
-  background: var(--bg);
-  color: var(--ink);
-}
-
-body.dark-mode .page-content .wrapper{
-  background: var(--card);
-  border-color: var(--border);
-  box-shadow: 0 20px 60px rgba(0,0,0,.4);
-}
-
-
-body.dark-mode .assignment-card,
-body.dark-mode .book-card{
-  background: var(--card);
-  border-color: var(--border);
-  box-shadow: 0 15px 40px rgba(0,0,0,.4);
-}
-
-body.dark-mode .site-header{
-  background: linear-gradient(
-    120deg,
-    #0b1220,
-    #0f2a63,
-    #1d4ed8,
-    #0ea5e9
-  );
-}
-body.dark-mode .site-header::after{
-  opacity: 0.10;
-}
-
-
-body.dark-mode .site-title,
-body.dark-mode .site-nav .page-link{
-  color: #f1f5f9 !important;
-}
-
-
-body.dark-mode table{
-  background: rgba(15, 23, 42, 0.65) !important;
-  border-color: var(--border) !important;
-}
-
-body.dark-mode th{
-  background: rgba(255,255,255,0.06) !important;
-  color: var(--ink) !important;
-  border-color: var(--border) !important;
-}
-
-body.dark-mode td{
-  background: transparent !important;
-  color: var(--ink) !important;
-  border-color: var(--border) !important;
-}
-
-/* Force zebra stripes */
-body.dark-mode tbody tr:nth-child(odd) td{
-  background: rgba(255,255,255,0.02) !important;
-}
-body.dark-mode tbody tr:nth-child(even) td{
-  background: rgba(255,255,255,0.05) !important;
-}
-
-/* Hover */
-body.dark-mode tbody tr:hover td{
-  background: rgba(56, 189, 248, 0.12) !important;
-}
-
-/* If any inline style or special table styles exist */
-body.dark-mode table tr,
-body.dark-mode table tbody,
-body.dark-mode table thead{
-  background: transparent !important;
-}
-
-
-
-/* ===============================
    Custom Footer
 =================================*/
 
@@ -421,7 +375,6 @@ body.dark-mode table thead{
   font-size: .9rem;
 }
 
-/* responsive */
 @media (max-width: 720px){
   .footer-grid{
     flex-direction: column;
@@ -429,116 +382,117 @@ body.dark-mode table thead{
   }
 }
 
-
-
 /* ===============================
-   Header layout fix (desktop + mobile)
+   DARK MODE
 =================================*/
 
-.site-header{
-  position: relative;
-  z-index: 2000;
+body.dark-mode{
+  --bg: #0f172a;
+  --card: #111827;
+  --ink: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #1f2937;
 }
 
-.header-wrap{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
+body.dark-mode{
+  background: var(--bg);
+  color: var(--ink);
 }
 
-/* Keep nav elements aligned */
-.site-nav{
-  display: flex;
-  align-items: center;
-  gap: 10px;
+body.dark-mode .assignment-card,
+body.dark-mode .book-card{
+  background: var(--card);
+  border-color: var(--border);
+  box-shadow: 0 15px 40px rgba(0,0,0,.4);
 }
 
-/* The links container */
-.site-nav .trigger{
-  display: flex;
-  align-items: center;
-  gap: 8px;
+body.dark-mode .site-header{
+  background: linear-gradient(
+    120deg,
+    #0b1220,
+    #0f2a63,
+    #1d4ed8,
+    #0ea5e9
+  );
 }
 
-/* Make links look consistent (no boxed tabs) */
-.site-nav .page-link{
+body.dark-mode .site-header::after{
+  opacity: 0.10;
+}
+
+body.dark-mode .site-title,
+body.dark-mode .site-nav .page-link{
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode table{
+  background: rgba(15, 23, 42, 0.65) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-mode th{
+  background: rgba(255,255,255,0.06) !important;
+  color: var(--ink) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-mode td{
   background: transparent !important;
-  border: 0 !important;
-  padding: 8px 10px !important;
-  border-radius: 10px;
+  color: var(--ink) !important;
+  border-color: var(--border) !important;
 }
 
-/* Theme button: separate, compact */
-.theme-toggle{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 34px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.22);
-  background: rgba(255,255,255,.14);
-  backdrop-filter: blur(8px);
-  cursor: pointer;
-  font-weight: 800;
-  line-height: 1;
+body.dark-mode tbody tr:nth-child(odd) td{
+  background: rgba(255,255,255,0.02) !important;
+}
+body.dark-mode tbody tr:nth-child(even) td{
+  background: rgba(255,255,255,0.05) !important;
+}
+body.dark-mode tbody tr:hover td{
+  background: rgba(56, 189, 248, 0.12) !important;
 }
 
-.theme-toggle:hover{
-  background: rgba(255,255,255,.20);
-}
+/* ===============================
+   MOBILE: Keep layout + fix menu overlay + right alignment
+=================================*/
 
-/* Dark-mode button look */
-body.dark-mode .theme-toggle{
-  border-color: rgba(255,255,255,.18);
-  background: rgba(255,255,255,.10);
-}
-
-/* -------------------------------
-   Mobile behavior (Minima menu)
---------------------------------*/
 @media (max-width: 720px){
-  /* Title should not collide */
+  /* title not collide */
   .site-title{
-    max-width: 62vw;
+    max-width: 58vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  /* On mobile, minima turns trigger into dropdown.
-     We make it a proper panel. */
+  /* bring nav closer to the right edge */
+  .site-header .wrapper{
+    padding-right: 10px;
+    padding-left: 14px;
+  }
+
   .site-nav{
-    position: relative;
     gap: 8px;
   }
 
-  /* Put toggle next to hamburger */
-  .menu-icon{
-    order: 2;
-  }
-  .theme-toggle{
-    order: 1;
-  }
-
-  /* Dropdown panel */
+  /* Dropdown panel: FORCE overlay on top of content */
   .site-nav .trigger{
     display: block;
-    position: absolute;
-    right: 0;
-    top: 46px;
-    width: min(280px, 92vw);
+    position: absolute !important;
+    right: 0 !important;
+    top: 46px !important;
+    width: min(300px, 92vw) !important;
+
     padding: 10px;
     border-radius: 14px;
     background: rgba(255,255,255,.16);
     border: 1px solid rgba(255,255,255,.22);
     backdrop-filter: blur(12px);
-    box-shadow: 0 18px 50px rgba(2,6,23,.25);
-    z-index: 9999;
+    box-shadow: 0 22px 60px rgba(2,6,23,.35);
+    z-index: 100000 !important;
   }
 
-  /* Hide panel unless menu is checked */
+  /* Hide panel unless menu checked */
   .site-nav .trigger{
     opacity: 0;
     transform: translateY(-6px);
@@ -551,25 +505,16 @@ body.dark-mode .theme-toggle{
     pointer-events: auto;
   }
 
+  /* dropdown links */
   .site-nav .page-link{
     display: block;
     margin: 4px 0;
-    padding: 10px 12px !important;
+    padding: 10px 12px;
     border-radius: 12px;
-  }
-
-  .site-nav .page-link:hover{
-    background: rgba(255,255,255,.18) !important;
   }
 
   body.dark-mode .site-nav .trigger{
     background: rgba(15,23,42,.72);
     border-color: rgba(255,255,255,.12);
   }
-
-  body.dark-mode .site-nav .page-link:hover{
-    background: rgba(56,189,248,.12) !important;
-  }
 }
-
-
