@@ -332,43 +332,41 @@ body.dark-mode .site-nav .page-link{
 }
 
 
-/* ===== Schedule table: dark mode polish ===== */
 body.dark-mode table{
-  background: rgba(15, 23, 42, 0.55);
-  border-color: var(--border);
+  background: rgba(15, 23, 42, 0.65) !important;
+  border-color: var(--border) !important;
 }
 
 body.dark-mode th{
-  background: rgba(255,255,255,0.06);
-  color: var(--ink);
-  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.06) !important;
+  color: var(--ink) !important;
+  border-color: var(--border) !important;
 }
 
 body.dark-mode td{
-  background: transparent;
-  color: var(--ink);
-  border-color: var(--border);
+  background: transparent !important;
+  color: var(--ink) !important;
+  border-color: var(--border) !important;
 }
 
-/* Zebra (dark) */
+/* Force zebra stripes */
 body.dark-mode tbody tr:nth-child(odd) td{
-  background: rgba(255,255,255,0.02);
+  background: rgba(255,255,255,0.02) !important;
 }
 body.dark-mode tbody tr:nth-child(even) td{
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.05) !important;
 }
 
-/* Hover (dark) */
+/* Hover */
 body.dark-mode tbody tr:hover td{
-  background: rgba(56, 189, 248, 0.12);
+  background: rgba(56, 189, 248, 0.12) !important;
 }
 
-/* Links in table */
-body.dark-mode table a{
-  color: #7dd3fc;
-}
-body.dark-mode table a:hover{
-  color: #bae6fd;
+/* If any inline style or special table styles exist */
+body.dark-mode table tr,
+body.dark-mode table tbody,
+body.dark-mode table thead{
+  background: transparent !important;
 }
 
 
