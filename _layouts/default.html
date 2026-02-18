@@ -1,0 +1,55 @@
+---
+layout: nil
+---
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+
+    {% include header.html %}
+
+    <div style="position:absolute; top:18px; right:30px;">
+      <button id="theme-toggle" style="
+        padding:6px 12px;
+        border-radius:20px;
+        border:1px solid rgba(0,0,0,.1);
+        background:#ffffffcc;
+        cursor:pointer;
+        font-weight:600;
+      ">
+        🌙 Dark
+      </button>
+    </div>
+
+    <main class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      if(localStorage.getItem("theme") === "dark"){
+        body.classList.add("dark-mode");
+        toggle.textContent = "☀️ Light";
+      }
+
+      toggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if(body.classList.contains("dark-mode")){
+          localStorage.setItem("theme", "dark");
+          toggle.textContent = "☀️ Light";
+        }else{
+          localStorage.setItem("theme", "light");
+          toggle.textContent = "🌙 Dark";
+        }
+      });
+    </script>
+
+  </body>
+</html>
