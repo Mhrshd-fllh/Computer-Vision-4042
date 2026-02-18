@@ -35,8 +35,24 @@ body{
   max-width: 1000px;
 }
 
-.site-title{
-  text-shadow: 0 1px 10px rgba(255,255,255,0.25);
+.site-title,
+.site-title:visited{
+  color: rgba(255,255,255,.95) !important;
+  text-shadow: 0 2px 14px rgba(2, 6, 23, .25);
+}
+
+.site-nav .page-link{
+  color: rgba(255,255,255,.92) !important;
+  text-shadow: 0 1px 10px rgba(2, 6, 23, .20);
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.16);
+  backdrop-filter: blur(6px);
+}
+
+.site-nav .page-link:hover{
+  background: rgba(255,255,255,.18);
+  border-color: rgba(255,255,255,.22);
+  text-decoration: none;
 }
 
 
@@ -316,28 +332,101 @@ body.dark-mode .site-nav .page-link{
 }
 
 
-/* Fix table colors in dark mode */
+/* ===== Schedule table: dark mode polish ===== */
 body.dark-mode table{
-  background: rgba(17, 24, 39, 0.9);
-}
-
-body.dark-mode th{
-  color: var(--ink);
-  background: rgba(255,255,255,0.04);
-}
-
-body.dark-mode td{
-  color: var(--ink);
-  background: transparent;
+  background: rgba(15, 23, 42, 0.55);
   border-color: var(--border);
 }
 
-/* Dark zebra rows */
-body.dark-mode tbody tr:nth-child(even) td{
-  background: rgba(255,255,255,0.03);
+body.dark-mode th{
+  background: rgba(255,255,255,0.06);
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
 }
 
-/* Dark hover */
+body.dark-mode td{
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--border);
+}
+
+/* Zebra (dark) */
+body.dark-mode tbody tr:nth-child(odd) td{
+  background: rgba(255,255,255,0.02);
+}
+body.dark-mode tbody tr:nth-child(even) td{
+  background: rgba(255,255,255,0.05);
+}
+
+/* Hover (dark) */
 body.dark-mode tbody tr:hover td{
-  background: rgba(56, 189, 248, 0.10);
+  background: rgba(56, 189, 248, 0.12);
+}
+
+/* Links in table */
+body.dark-mode table a{
+  color: #7dd3fc;
+}
+body.dark-mode table a:hover{
+  color: #bae6fd;
+}
+
+
+
+/* ===============================
+   Custom Footer
+=================================*/
+
+.site-footer{
+  margin-top: 50px;
+  border-top: none;
+  background: #0b1220;
+  color: rgba(241,245,249,.85);
+  padding: 34px 0 18px;
+}
+
+.footer-grid{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-title{
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.2px;
+  color: #f1f5f9;
+}
+
+.footer-sub{
+  margin-top: 6px;
+  color: rgba(241,245,249,.7);
+  font-size: .95rem;
+}
+
+.footer-university{
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.footer-address{
+  margin-top: 6px;
+  color: rgba(241,245,249,.7);
+  font-size: .95rem;
+}
+
+.footer-bottom{
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,.10);
+  color: rgba(241,245,249,.6);
+  font-size: .9rem;
+}
+
+/* responsive */
+@media (max-width: 720px){
+  .footer-grid{
+    flex-direction: column;
+    gap: 18px;
+  }
 }
