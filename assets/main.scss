@@ -520,3 +520,46 @@ body.dark-mode tbody tr:hover td{
     border-color: rgba(255,255,255,.12);
   }
 }
+
+
+/* ===============================
+   HARD FIX: Dark mode table striping (no white rows)
+   Put at END of file
+=================================*/
+
+body.dark-mode table,
+body.dark-mode thead,
+body.dark-mode tbody,
+body.dark-mode tr{
+  background: transparent !important;
+}
+
+body.dark-mode table{
+  background: rgba(15, 23, 42, 0.55) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-mode th{
+  background: rgba(255,255,255,0.06) !important;
+  color: var(--ink) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-mode td{
+  background: transparent !important;
+  color: var(--ink) !important;
+  border-color: var(--border) !important;
+}
+
+/* zebra — force */
+body.dark-mode tbody tr:nth-child(odd) td{
+  background: rgba(255,255,255,0.02) !important;
+}
+body.dark-mode tbody tr:nth-child(even) td{
+  background: rgba(255,255,255,0.05) !important;
+}
+
+/* hover */
+body.dark-mode tbody tr:hover td{
+  background: rgba(56, 189, 248, 0.12) !important;
+}
