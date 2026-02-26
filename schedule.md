@@ -7,10 +7,10 @@ title: Schedule
 
 | Session | Date | Topic | Slides | Notes |
 |---:|:---:|---|:---:|---|
-| 1 | 1404/11/25 | Intorduction | [CV01](#https://raw.githubusercontent.com/Mhrshd-fllh/Computer-Vision-4042/main/assets/slides/FCV_01.pdf) |  |
-| 2 | 1404/11/27 | Image Formation | [CV02](#https://raw.githubusercontent.com/Mhrshd-fllh/Computer-Vision-4042/main/assets/slides/FCV_02.pdf) |  |
-| 3 | 1404/12/02 | Image Processing in Spatial Domain (1) | [CV03](#https://raw.githubusercontent.com/Mhrshd-fllh/Computer-Vision-4042/main/assets/slides/FCV_03.pdf) |  |
-| 4 | 1404/12/04 | Image Processing in Spatial Domain (2) | [CV04](#https://raw.githubusercontent.com/Mhrshd-fllh/Computer-Vision-4042/main/assets/slides/FCV_04.pdf) |  |
+| 1 | 1404/11/25 | Intorduction | [CV01](https://raw.githubusercontent.com/Mhrshd-fllh/Computer-Vision-4042/main/assets/slides/FCV_01.pdf) |  |
+| 2 | 1404/11/27 | Image Formation | [CV02](https://raw.githubusercontent.com/Mhrshd-fllh/Computer-Vision-4042/main/assets/slides/FCV_02.pdf) |  |
+| 3 | 1404/12/02 | Image Processing in Spatial Domain (1) | [CV03](https://raw.githubusercontent.com/Mhrshd-fllh/Computer-Vision-4042/main/assets/slides/FCV_03.pdf) |  |
+| 4 | 1404/12/04 | Image Processing in Spatial Domain (2) | [CV04](https://raw.githubusercontent.com/Mhrshd-fllh/Computer-Vision-4042/main/assets/slides/FCV_04.pdf) |  |
 | 5 | 1404/12/07 | Image Processing in Spatial Domain (3) | [CV05](#) | Online Class |
 | 6 | 1404/12/09 | Shape Extraction (1) | [CV06](#) |  |
 | 7 | 1404/12/11 | Shape Extraction (2) | [CV07](#) |  |
