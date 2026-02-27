@@ -15,8 +15,8 @@ title: Assignments
   </ul>
 
   <p>
-    <a href="#">Assignment PDF</a><br>
-    <a href="#">Solution PDF</a>
+    <a href="https://raw.githubusercontent.com/Mhrshd-fllh/Computer-Vision-4042/main/assets/assignments/HW1/Questions/CV_HW1.zip" target="_blank">Assignment Zip</a><br>
+    <a href="#">Solution Zip</a>
   </p>
 </div>
 
@@ -30,8 +30,8 @@ title: Assignments
   </ul>
 
   <p>
-    <a href="#">Assignment PDF</a><br>
-    <a href="#">Solution PDF</a>
+    <a href="#">Assignment Zip</a><br>
+    <a href="#">Solution Zip</a>
   </p>
 </div>
 
@@ -45,8 +45,8 @@ title: Assignments
   </ul>
 
   <p>
-    <a href="#">Assignment PDF</a><br>
-    <a href="#">Solution PDF</a>
+    <a href="#">Assignment Zip</a><br>
+    <a href="#">Solution Zip</a>
   </p>
 </div>
 
@@ -60,8 +60,8 @@ title: Assignments
   </ul>
 
   <p>
-    <a href="#">Assignment PDF</a><br>
-    <a href="#">Solution PDF</a>
+    <a href="#">Assignment Zip</a><br>
+    <a href="#">Solution Zip</a>
   </p>
 </div>
 
@@ -75,8 +75,8 @@ title: Assignments
   </ul>
 
   <p>
-    <a href="#">Assignment PDF</a><br>
-    <a href="#">Solution PDF</a>
+    <a href="#">Assignment Zip</a><br>
+    <a href="#">Solution Zip</a>
   </p>
 </div>
 
@@ -90,7 +90,7 @@ title: Assignments
   </ul>
 
   <p>
-    <a href="#">Assignment PDF</a><br>
-    <a href="#">Solution PDF</a>
+    <a href="#">Assignment Zip</a><br>
+    <a href="#">Solution Zip</a>
   </p>
 </div>
